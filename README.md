@@ -6,6 +6,9 @@ This is a simple API to control tuya IoT devices locally
 
 All endpoints are available as opencollection at `bruno/`.
 
+<img width="1230" height="576" alt="image" src="https://github.com/user-attachments/assets/b179c8e8-e9a7-4c2b-93b9-6e8cbe61ea2f" />
+
+
 # Endpoints (docs / plaintext)
 
 > GET /
