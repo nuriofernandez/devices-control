@@ -5,8 +5,10 @@ info:
 
 http:
   method: GET
-  url: http://localhost:8000/xxxxxxxxxxxxxxxxxxxxxxx
-  auth: inherit
+  url: http://localhost:8000/{{DEVICE_ID}}
+  auth:
+    type: bearer
+    token: "{{AUTH}}"
 
 settings:
   encodeUrl: true

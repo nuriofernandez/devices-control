@@ -5,8 +5,10 @@ info:
 
 http:
   method: POST
-  url: http://localhost:8000/xxxxxxxxxxxxxxxxxxxxxxx/off
-  auth: inherit
+  url: http://localhost:8000/{{DEVICE_ID}}/off
+  auth:
+    type: bearer
+    token: "{{AUTH}}"
 
 settings:
   encodeUrl: true

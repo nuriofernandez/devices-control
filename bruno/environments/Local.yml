@@ -1,0 +1,6 @@
+name: Local
+variables:
+  - name: DEVICE_ID
+    value: xxxxxxxxxxxxxxxxxxxxxxx
+  - secret: true
+    name: AUTH

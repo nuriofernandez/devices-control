@@ -6,7 +6,9 @@ info:
 http:
   method: GET
   url: http://localhost:8000
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{AUTH}}"
 
 settings:
   encodeUrl: true
