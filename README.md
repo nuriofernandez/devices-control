@@ -92,7 +92,13 @@ Response:
 
 # How to run it?
 
-First, you should make a copy of `devices.json.sample` named `devices.json`
+Make sure you have required dependencies:
+```bash
+pip install fastapi
+pip install uvicorn
+```
+
+Then, you should make a copy of `devices.json.sample` named `devices.json`
 setting your real devices settings.
 
 ```bash
@@ -101,7 +107,7 @@ cp devices.json.sample devices.json
 nano devices.json
 ```
 
-Second, you should make a copy of `settings.json.sample` named `settings.json`
+After that, you should make a copy of `settings.json.sample` named `settings.json`
 setting there the token/password you want to use for the API authentication.
 
 ```bash
