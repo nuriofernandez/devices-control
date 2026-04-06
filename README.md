@@ -82,3 +82,11 @@ Response:
   }
 }
 ```
+
+# How to run it?
+
+Just execute `main.py` (located at `source/`) or use your favorite IDE.
+```bash
+cd source
+python main.py
+```
