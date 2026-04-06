@@ -85,7 +85,16 @@ Response:
 
 # How to run it?
 
-Just execute `main.py` (located at `source/`) or use your favorite IDE.
+First, you should make a copy of `devices.json.sample` named `devices.json`
+setting your real devices settings.
+
+```bash
+cd source
+cp devices.json.sample devices.json
+nano devices.json
+```
+
+Once the above is done, just execute `main.py` (located at `source/`) or use your favorite IDE.
 ```bash
 cd source
 python main.py
