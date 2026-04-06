@@ -1,4 +1,5 @@
 source/devices.json
+source/settings.json
 .venv
 .idea
 __pycache__/

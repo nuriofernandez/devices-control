@@ -1,10 +1,25 @@
-from fastapi import FastAPI
+import json
+
+from fastapi import FastAPI, Depends, HTTPException, status
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 import uvicorn
 
 import devices
 from devices import turnOn, status, turnOff
 
-app = FastAPI()
+with open('settings.json', 'r') as file:
+    settings = json.load(file)
+
+security = HTTPBearer()
+def verify_token(credentials: HTTPAuthorizationCredentials = Depends(security)):
+    if credentials.credentials != settings.SECRET_TOKEN:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid or missing token",
+        )
+    return credentials.credentials
+
+app = FastAPI(dependencies=[Depends(verify_token)])
 
 @app.get("/")
 def read_root():
