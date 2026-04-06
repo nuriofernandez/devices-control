@@ -1,4 +1,4 @@
-devices.json
+source/devices.json
 .venv
 .idea
 __pycache__/
