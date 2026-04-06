@@ -101,6 +101,15 @@ cp devices.json.sample devices.json
 nano devices.json
 ```
 
+Second, you should make a copy of `settings.json.sample` named `settings.json`
+setting there the token/password you want to use for the API authentication.
+
+```bash
+cd source
+cp devices.json.sample devices.json
+nano devices.json
+```
+
 Once the above is done, just execute `main.py` (located at `source/`) or use your favorite IDE.
 ```bash
 cd source
