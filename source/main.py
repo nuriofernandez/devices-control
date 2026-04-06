@@ -12,7 +12,7 @@ with open('settings.json', 'r') as file:
 
 security = HTTPBearer()
 def verify_token(credentials: HTTPAuthorizationCredentials = Depends(security)):
-    if credentials.credentials != settings.SECRET_TOKEN:
+    if credentials.credentials != settings["SECRET_TOKEN"]:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Invalid or missing token",
