@@ -1,6 +1,7 @@
 import json
 
 from fastapi import FastAPI, Depends, HTTPException, status
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 import uvicorn
 
@@ -20,6 +21,14 @@ def verify_token(credentials: HTTPAuthorizationCredentials = Depends(security)):
     return credentials.credentials
 
 app = FastAPI(dependencies=[Depends(verify_token)])
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],           # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],           # Allows all methods
+    allow_headers=["*"],           # Allows all headers
+)
 
 @app.get("/")
 def read_root():
