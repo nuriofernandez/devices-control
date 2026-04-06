@@ -1,0 +1,18 @@
+[
+    {
+        "type": "RGBTWLight",
+        "name": "Office door",
+        "id": "virtual_id_here",
+        "key": "local_key_here",
+        "ip": "192.168.1.XX",
+        "version": 3.3
+    },
+    {
+        "type": "Outlet",
+        "name": "Desktop spotlight",
+        "id": "virtual_id_here",
+        "key": "local_key_here",
+        "ip": "192.168.1.XX",
+        "version": 3.3
+    }
+]
